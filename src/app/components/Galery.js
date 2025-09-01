@@ -53,10 +53,10 @@ export default function Gallery() {
           variants={fadeIn}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
             Gallery
           </h2>
-          <p className="mt-4 text-xl text-gray-400">
+          <p className="px-2 mt-3 md:mt-4 text-lg md:text-xl text-gray-400">
             Kumpulan momen tak terlupakan dari perjalanan kami di Desa
             Kembangbelor 2025
           </p>
@@ -125,10 +125,10 @@ export default function Gallery() {
           variants={fadeIn}
           className="text-center mt-16"
         >
-          <h3 className="text-3xl font-semibold text-white">
+          <h3 className="text-xl font-semibold text-white">
             Momen Terbaik Kami
           </h3>
-          <p className="max-w-2xl mx-auto mt-3 text-lg text-gray-400">
+          <p className="px-2 max-w-2xl mx-auto mt-3 text-lg text-gray-400">
             Setiap foto menyimpan cerita unik, dari canda tawa di kelas hingga
             kebersamaan saat acara KKN. Ini adalah arsip digital dari kenangan
             yang membentuk kami.

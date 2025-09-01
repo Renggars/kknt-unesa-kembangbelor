@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { LuMessageCircleMore, LuSend, LuImagePlus } from "react-icons/lu";
@@ -26,12 +27,12 @@ const ContactSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center md:items-start">
+    <div className="flex flex-col items-center md:items-start w-full">
       {/* Bagian Kiri: Our Location */}
       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100">
         Our location
       </h2>
-      <div className="relative w-full h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gray-700">
+      <div className="relative w-full h-[200px] lg:h-[300px] rounded-2xl overflow-hidden shadow-xl border border-gray-700">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1715.1369198696264!2d112.55926104599824!3d-7.656485360177616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78770df742bbdb%3A0x240424901653d069!2zQmFsYWkgRGVzYSBLZW1iYW5nYmVsb3Ig6qan6qat6qa66qai6qa66qax6qaP6qa66qap6qeA6qan6qaB6qan6qa66qat6qa66qa06qaC!5e0!3m2!1sid!2sid!4v1756642655544!5m2!1sid!2sid"
           allowFullScreen=""
@@ -46,11 +47,11 @@ const ContactSection = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-100">
           Contact us
         </h2>
-        <div className="w-full">
+        <div className="w-full flex-col items-center md:items-start">
           {/* Alamat */}
           <div className="flex items-start mb-6">
-            <span className="text-2xl">📍</span>
-            <p className="text-lg text-gray-300">
+            <span className="text-2xl hidden lg:inline-block">📍</span>
+            <p className="md:text-lg text-gray-300">
               Jl.Tirtawning No.05, Belor, Kembangbelor, Kec. Pacet, <br />
               Kabupaten Mojokerto, Jawa Timur 61374
             </p>
@@ -61,14 +62,14 @@ const ContactSection = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mb-8 cursor-pointer">
+            <button className="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-2 lg:py-3 px-5 lg:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mb-8 cursor-pointer">
               GET DIRECTION
             </button>
           </a>
           {/* Tautan Media Sosial */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 w-fulld">
             {socialMediaLinks.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.link}
                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
@@ -77,12 +78,13 @@ const ContactSection = () => {
                   <Image
                     src={item.icon}
                     alt={item.label}
-                    width={40}
-                    height={40}
+                    width={28} // Ukuran ikon dikecilkan sedikit untuk mobile
+                    height={28}
+                    className="sm:w-10 sm:h-10"
                   />
-                  <p className="text-xl">{item.label}</p>
+                  <p className=" md:text-xl">{item.label}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -129,12 +131,12 @@ const CommentForm = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-8 rounded-2xl xl:w-full">
+    <div className="bg-gray-900 p-6 md:p-8 rounded-2xl w-full">
       <div className="flex items-center gap-4 mb-10 mt-1">
         <div className="p-3 rounded-2xl bg-indigo-500/25">
-          <LuMessageCircleMore className="text-4xl text-indigo-500" />
+          <LuMessageCircleMore className="text-3xl md:text-4xl text-indigo-500" />
         </div>
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
           Comments{" "}
           <span className="text-indigo-500/20">({comments.length})</span>
         </h2>
@@ -249,7 +251,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen bg-black text-white grid grid-cols-2 items-center justify-center px-56 gap-20"
+      className="w-full bg-black text-white min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 py-16 px-6 sm:px-12 md:px-16 "
     >
       <ContactSection />
       <CommentForm />

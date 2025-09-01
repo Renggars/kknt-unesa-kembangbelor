@@ -47,13 +47,16 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
         className="relative z-10 w-full"
       >
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Image
-            src="/logo.png"
-            alt="KKNT UNESA DESA KEMBANGBELOR 2025"
-            width={80}
-            height={80}
-          />
+        <div className="max-w-7xl mx-auto py-2 flex justify-between items-center px-4 sm:px-10 md:px-80">
+          <div className="relative w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20">
+            <Image
+              src="/logo.png"
+              alt="KKNT UNESA DESA KEMBANGBELOR 2025"
+              fill
+              className="object-contain"
+            />
+          </div>
+
           <div className="hidden md:flex space-x-8 text-xl">
             {navLinks.map((nav) => (
               <Link key={nav.name} href={nav.href}>
