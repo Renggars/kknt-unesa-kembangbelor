@@ -253,7 +253,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-black text-white min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 py-16 px-6 sm:px-12 md:px-16 xl:px-24"
+      className="w-full bg-black text-white min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 py-16 px-6 sm:px-12 md:px-16 lg:px-10 xl:px-24"
     >
       <ContactSection />
       <CommentForm />

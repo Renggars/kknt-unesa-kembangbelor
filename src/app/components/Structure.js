@@ -18,7 +18,7 @@ const ORGANIZATIONAL_CHART_DATA = {
   sekretaris: {
     name: "Amanda",
     position: "Sekretaris",
-    major: "Ilmu Administrasi Negara",
+    major: "Administrasi Negara",
     imageUrl: "/struktur/amanda.png",
   },
 
@@ -107,7 +107,7 @@ const MemberCard = ({ name, major, imageUrl }) => {
   return (
     <div
       // Kontainer utama card dengan efek hover group
-      className="group relative flex items-center space-x-2 lg:space-x-3  md:space-x-3 p-2 md:p-3 rounded-xl shadow-lg bg-gray-800 border border-gray-700 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-indigo-500/30 hover:-translate-y-1 hover:scale-105 min-w-52 justify-center"
+      className="group relative flex items-center space-x-2 lg:space-x-3  md:space-x-3 p-2 md:p-3 rounded-xl shadow-lg bg-gray-800 border border-gray-700 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-indigo-500/30 hover:-translate-y-1 hover:scale-105 min-w-36 sm:min-w-[155px] md:min-w-44 lg:min-w-52 justify-center"
     >
       {/* 1. Bagian Kiri: Gambar */}
       <div className="flex-shrink-0">
@@ -143,7 +143,7 @@ const Structure = () => {
   return (
     <section
       id="structure"
-      className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center scroll-mt-28"
+      className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center scroll-mt-20 sm:scroll-mt-2 md:scroll-mt-28 "
     >
       <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-100">
         Structure
@@ -174,7 +174,7 @@ const Structure = () => {
         />
       </div>
 
-      {/* Ketua & Wakil Ketua*/}
+      {/* Ketua*/}
       <div className="flex flex-col items-center">
         <div
           className="flex flex-col items-center"
@@ -195,7 +195,7 @@ const Structure = () => {
       <div className="flex flex-col items-center justify-center">
         {/* Vertical line */}
         <div
-          className="w-0.5 h-10 bg-white"
+          className="w-0.5 h-5 md:h-6 lg:h-8 xl:h-10 bg-white"
           data-aos="fade-up"
           data-aos-delay="350"
         />
@@ -208,7 +208,7 @@ const Structure = () => {
           />
           {/* Vertical line */}
           <div
-            className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[566px] bg-white"
+            className="h-0.5 w-[210px] sm:w-[194px] md:w-[274px] lg:w-[450px] xl:w-[566px] bg-white"
             data-aos="fade-up"
             data-aos-delay="400"
           />
@@ -219,13 +219,13 @@ const Structure = () => {
             data-aos-delay="400"
           />
         </div>
-        <div className="flex justify-center items-center gap-x-[24px] sm:gap-x-[38px] md:gap-x-[115px] lg:gap-x-[284px] xl:gap-[500px]">
-          <div className="text-white my-1">Bendahara</div>
+        <div className="flex justify-center items-center gap-x-[135px] sm:gap-x-[122px] md:gap-x-[200px] lg:gap-x-[374px] xl:gap-[500px]">
           <div className="text-white my-1">Sekretaris</div>
+          <div className="text-white my-1">Bendahara</div>
         </div>
-        <div className="flex justify-center items-center gap-x-[24px] sm:gap-x-[38px] md:gap-x-[115px] lg:gap-x-[284px] xl:gap-[340px]">
+        <div className="flex justify-center items-center gap-x-[38px] sm:gap-x-[35px] md:gap-x-[95px] lg:gap-x-[223px] xl:gap-[340px]">
           <div
-            className="flex flex-col items-center"
+            className="flex flex-col items-center mr-6 sm:mr-4 md:mr-0"
             data-aos="fade-up"
             data-aos-delay="450"
           >
@@ -236,7 +236,7 @@ const Structure = () => {
               imageUrl={ORGANIZATIONAL_CHART_DATA.sekretaris.imageUrl}
             />
             <div
-              className="w-0.5 h-5 bg-white relative mr-5"
+              className="w-0.5 h-5 bg-white relative mr-2 sm:mr-0 sm:ml-3 md:mr-1 lg:mr-[17px] xl:mr-5"
               data-aos="fade-up"
               data-aos-delay="550"
             />
@@ -255,7 +255,7 @@ const Structure = () => {
               imageUrl={ORGANIZATIONAL_CHART_DATA.bendahara.imageUrl}
             />
             <div
-              className="w-0.5 h-5 bg-white relative"
+              className="w-0.5 h-5 mr-[10px] sm:mr-[18px] md:mr-[17px] lg:mr-0 bg-white relative"
               data-aos="fade-up"
               data-aos-delay="550"
             />
@@ -263,23 +263,23 @@ const Structure = () => {
         </div>
         {/* Vertical line */}
         <div
-          className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[573px] xl:ml-[2px] bg-white"
+          className="h-0.5 w-[216px] sm:w-[196px] md:w-[278px] md:ml-[2px] lg:ml-0 lg:w-[40px] xl:w-[573px] xl:ml-[2px] bg-white"
           data-aos="fade-up"
           data-aos-delay="400"
         />
         {/* Horizontal line */}
         <div
-          className="w-0.5 h-10 bg-white relative"
+          className="w-0.5 h-4 md:h-6 lg:h-8 xl:h-10 bg-white relative"
           data-aos="fade-up"
           data-aos-delay="550"
         />
 
         <div
-          className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[746px] bg-white"
+          className="h-0.5 w-[216px] sm:w-[422px] md:w-[470px] lg:w-[608px] xl:w-[746px] bg-white"
           data-aos="fade-up"
           data-aos-delay="400"
         />
-        <div className="flex justify-center items-center xl:gap-x-[370px]">
+        <div className="flex justify-center items-center gap-x-[212px] sm:gap-x-52 md:gap-x-[232px] lg:gap-x-[301px] xl:gap-x-[370px]">
           <div
             className="w-0.5 h-5 bg-white relative"
             data-aos="fade-up"
@@ -291,7 +291,7 @@ const Structure = () => {
             data-aos-delay="550"
           />
           <div
-            className="w-0.5 h-5 bg-white relative"
+            className="w-0.5 h-5 bg-white relative hidden sm:block"
             data-aos="fade-up"
             data-aos-delay="550"
           />
@@ -302,19 +302,23 @@ const Structure = () => {
       <div className="flex flex-col items-center">
         {/* Vertical line */}
 
-        <div className="flex justify-center gap-x-[120px] sm:gap-x-[150px] md:gap-x-[230px] lg:gap-x-[324px] xl:gap-x-[325px] my-1">
-          <div data-aos="fade-up" data-aos-delay="600" className="">
+        <div className="flex justify-center gap-x-[174px] sm:gap-x-[160px] md:gap-x-[188px] lg:gap-x-[254px] xl:gap-x-[325px] my-1">
+          <div data-aos="fade-up" data-aos-delay="600">
             Humas
           </div>
           <div data-aos="fade-up" data-aos-delay="600">
             Acara
           </div>
-          <div data-aos="fade-up" data-aos-delay="600" className="">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="600"
+            className="hidden sm:block"
+          >
             Perkap
           </div>
         </div>
 
-        <div className="flex justify-center gap-x-[24px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[170px]">
+        <div className="flex justify-center gap-x-[80px] sm:gap-x-[50px] md:gap-x-[60px] lg:gap-x-[100px] xl:gap-x-[170px]">
           <div className="flex flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.humas.map((member, index) => (
               <div
@@ -330,7 +334,7 @@ const Structure = () => {
                 />
               </div>
             ))}
-            <div className="w-0.5 h-5 bg-white" />
+            <div className="w-0.5 h-5 bg-white ml-2 sm:ml-0 sm:mr-[10px] md:mr-0" />
           </div>
           <div className="flex flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.acara.map((member, index) => (
@@ -347,7 +351,7 @@ const Structure = () => {
                 />
               </div>
             ))}
-            <div className="w-0.5 h-5 bg-white " />
+            <div className="w-0.5 h-5 bg-white mr-[14px] sm:mr-0" />
           </div>
           <div className="hidden sm:flex flex-col sm:flex-col xl:flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.perlengkapan.map(
@@ -365,62 +369,53 @@ const Structure = () => {
                 </div>
               )
             )}
-            <div className="w-0.5 h-5 bg-white " />
+            <div className="w-0.5 h-5 bg-white sm:ml-[10px]" />
           </div>
         </div>
 
         <div
-          className="flex sm:hidden xl:inline-block h-0.5 bg-white w-[758px]"
+          className="flex sm:inline-block h-0.5 bg-white sm:w-[422px] md:w-[474px] lg:w-[618px] xl:w-[708px]"
           data-aos="fade-up"
           data-aos-delay="650"
         />
-      </div>
-
-      <div className="flex justify-center gap-x-[24px]">
-        <div className="flex flex-col sm:hidden gap-3">
-          {ORGANIZATIONAL_CHART_DATA.divisi.perlengkapan.map(
-            (member, index) => (
-              <div
-                key={`perlengkapan-${index}`}
-                data-aos="fade-up"
-                data-aos-delay={550 + index * 50}
-              >
-                <MemberCard
-                  name={member.name}
-                  major={member.major}
-                  imageUrl={member.imageUrl}
-                />
-              </div>
-            )
-          )}
-        </div>
       </div>
 
       {/* LEVEL 5 (Dokumentasi) */}
       <div className="flex flex-col items-center">
         {/* Vertical line */}
         <div
-          className="w-0.5 h-6 bg-white"
+          className="w-0.5 h-6 bg-white hidden sm:block"
           data-aos="fade-up"
           data-aos-delay="700"
         />
-
         <div
-          className="text-lg text-white my-1"
+          className="hidden sm:block text-lg text-white my-1"
           data-aos="fade-up"
-          data-aos-delay="750"
+          data-aos-delay="600"
         >
           Dokumentasi
         </div>
+        <div className="flex sm:hidden sm:flex-col items-center gap-x-[166px]">
+          <div
+            className="text-lg text-white my-1"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            PDD
+          </div>
+          <div data-aos="fade-up" data-aos-delay="600" className="sm:hidden">
+            Perkap
+          </div>
+        </div>
 
-        <div className="flex justify-center gap-x-[24px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[50px] 2xl:gap-x-[80px">
-          <div className="flex  justify-center gap-x-5">
+        <div className="flex justify-center gap-x-[60px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[50px] 2xl:gap-x-[80px">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-x-5">
             {ORGANIZATIONAL_CHART_DATA.divisi.dokumentasi.map(
               (member, index) => (
                 <div
                   key={`dokumentasi-${index}`}
                   data-aos="fade-up"
-                  data-aos-delay={700 + index * 50}
+                  data-aos-delay={650 + index * 50}
                 >
                   <MemberCard
                     name={member.name}
@@ -430,6 +425,26 @@ const Structure = () => {
                 </div>
               )
             )}
+          </div>
+          {/* mobile */}
+          <div className="flex justify-center gap-x-[24px]">
+            <div className="flex flex-col sm:hidden gap-3">
+              {ORGANIZATIONAL_CHART_DATA.divisi.perlengkapan.map(
+                (member, index) => (
+                  <div
+                    key={`perlengkapan-${index}`}
+                    data-aos="fade-up"
+                    data-aos-delay={650 + index * 50}
+                  >
+                    <MemberCard
+                      name={member.name}
+                      major={member.major}
+                      imageUrl={member.imageUrl}
+                    />
+                  </div>
+                )
+              )}
+            </div>
           </div>
         </div>
       </div>

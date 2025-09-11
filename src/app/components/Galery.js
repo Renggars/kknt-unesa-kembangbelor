@@ -51,12 +51,12 @@ export default function Gallery() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
           variants={fadeIn}
-          className="text-center mb-12"
+          className="text-center mb-12 px-6 sm:px-10 md:px-0"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
             Gallery
           </h2>
-          <p className="px-2 mt-3 md:mt-4 text-lg md:text-xl text-gray-400">
+          <p className="mt-3 md:mt-4 text-lg md:text-xl text-gray-400">
             Kumpulan momen tak terlupakan dari perjalanan kami di Desa
             Kembangbelor 2025
           </p>
@@ -117,7 +117,7 @@ export default function Gallery() {
             <div className="slider-controler mt-8">
               <div className="swiper-button-prev slider-arrow"></div>
               <div className="swiper-button-next slider-arrow"></div>
-              <div className="swiper-pagination"></div>
+              <div className="swiper-pagination" />
             </div>
           </Swiper>
         </motion.div>
@@ -133,8 +133,8 @@ export default function Gallery() {
           <h3 className="text-xl font-semibold text-white">
             Momen Terbaik Kami
           </h3>
-          <p className="px-2 max-w-2xl mx-auto mt-3 text-lg text-gray-400">
-            Setiap foto menyimpan cerita unik, dari canda tawa di kelas hingga
+          <p className="px-4 sm:px-10 md:px-0 max-w-2xl mx-auto mt-3 text-lg text-gray-400">
+            Setiap foto menyimpan cerita unik, dari canda tawa hingga
             kebersamaan saat acara KKN. Ini adalah arsip digital dari kenangan
             yang membentuk kami.
           </p>

@@ -98,7 +98,7 @@ export default function Navbar() {
           transition={{ duration: 0.5 }}
           className="relative z-10 w-full"
         >
-          <div className="mx-auto py-2 flex justify-between items-center px-6 sm:px-10 md:px-24">
+          <div className="mx-auto py-2 flex justify-between items-center px-4 sm:px-10 md:px-14 lg:px-16 xl:px-24">
             <Link
               href="/"
               className="relative w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
@@ -127,7 +127,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="md:hidden text-white z-50 p-2"
+              className="md:hidden text-white z-50 cursor-pointer"
               aria-label="Toggle Menu"
             >
               {isMenuOpen ? (
@@ -176,7 +176,7 @@ export default function Navbar() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-0 bg-black/90 backdrop-blur-lg z-40 flex flex-col items-center justify-center space-y-8"
+            className="fixed inset-0 bg-black/90 backdrop-blur-lg z-40 flex flex-col items-center justify-center space-y-6"
           >
             {navLinks.map((nav) => (
               <motion.div key={nav.name} variants={linkVariants}>

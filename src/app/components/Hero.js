@@ -33,7 +33,7 @@ export default function Hero() {
     >
       {/* Background Image with Parallax Effect */}
       <motion.div
-        className="absolute -top-10 lg:top-0 left-0 w-full h-full bg-cover bg-center"
+        className="absolute left-0 w-full h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/blog.png')" }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -63,20 +63,20 @@ export default function Hero() {
         </motion.p>
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-8xl font-extrabold uppercase tracking-tighter"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-extrabold uppercase tracking-tighter"
           style={{ textShadow: "0px 4px 15px rgba(0,0,0,0.5)" }}
         >
           Welcome
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-2xl mt-3 font-medium text-gray-300"
+          className="text-lg lg:text-xl xl::text-2xl mt-3 font-medium text-gray-300"
         >
           TO KKNT UNESA DESA KEMBANGBELOR 2025
         </motion.p>
 
-        <motion.div variants={itemVariants} className="mt-10">
-          <button className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
+        <motion.div variants={itemVariants} className="mt-8 sm:mt-10">
+          <button className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
             Jelajahi Karya Kami
           </button>
         </motion.div>
