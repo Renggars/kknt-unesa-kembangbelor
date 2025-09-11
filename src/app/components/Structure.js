@@ -5,91 +5,99 @@ import React from "react";
 
 const ORGANIZATIONAL_CHART_DATA = {
   dosen: {
-    mame: "Dosen1",
-    position: "Dosen",
-    major: "Teknik Informatika",
-    imageUrl: "/profile.jpeg",
+    mame: "Aby Nugrah Septanto, S.Kep.,Ns., M.Sc.",
+    position: "Dosen Pembimbing Lapangan",
+    imageUrl: "/struktur/dosen.png",
   },
   ketuaKelas: {
-    name: "Renggars2",
-    position: "Ketua Kelas",
-    major: "Teknik Informatika",
-    imageUrl: "/profile.jpeg",
-  },
-  wakilKetua: {
-    name: "Renggars3",
-    position: "Wakil Ketua",
-    major: "Teknik Informatika",
-    imageUrl: "/profile.jpeg",
+    name: "Teguh",
+    position: "Ketua",
+    major: "Ilmu Keolahragaan",
+    imageUrl: "/struktur/teguh.png",
   },
   sekretaris: {
-    name: "Renggars4",
+    name: "Amanda",
     position: "Sekretaris",
-    major: "Teknik Informatika",
-    imageUrl: "/profile.jpeg",
+    major: "Ilmu Administrasi Negara",
+    imageUrl: "/struktur/amanda.png",
   },
 
   bendahara: {
-    name: "Renggars 6",
+    name: "Fadilah",
     position: "Bendahara",
-    major: "Teknik Informatika",
-    imageUrl: "/profile.jpeg",
+    major: "Akuntansi",
+    imageUrl: "/struktur/fadhilah.png",
   },
   divisi: {
     humas: [
       {
-        name: "Renggars 8",
+        name: "Tya",
         position: "Humas",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        major: "Manajemen",
+        imageUrl: "/struktur/tya.png",
       },
       {
-        name: "Renggars 9",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        name: "Nabila",
+        major: "Ekonomi",
+        imageUrl: "/struktur/nabila.png",
+      },
+      {
+        name: "Charina",
+        major: "Manajemen",
+        imageUrl: "/struktur/charina.png",
       },
     ],
     acara: [
       {
-        name: "Renggars 10",
+        name: "Theo",
         position: "Acara",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        major: "Matematika",
+        imageUrl: "/struktur/theo.png",
       },
       {
-        name: "Renggars 11",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        name: "Nurna",
+        major: "PPKN",
+        imageUrl: "/struktur/nurna.png",
+      },
+      {
+        name: "Isna",
+        major: "Akuntansi",
+        imageUrl: "/struktur/isna.png",
       },
     ],
     perlengkapan: [
       {
-        name: "Renggars 12",
+        name: "Iqbal",
         position: "Perlengkapan",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        major: "Ilmu Keolahragaan",
+        imageUrl: "/struktur/iqbal.png",
       },
       {
-        name: "Renggars 13",
-        major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        name: "Burhan",
+        major: "Teknik Sipil",
+        imageUrl: "/struktur/burhan.png",
+      },
+      {
+        name: "Lutfhi",
+        major: "Teknik Sipil",
+        imageUrl: "/struktur/lutfhi.png",
       },
     ],
     dokumentasi: [
       {
-        name: "Renggars 14",
+        name: "Natsya",
         major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        imageUrl: "/struktur/natasya.png",
       },
       {
-        name: "Renggars 15",
+        name: "Rengga",
         major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        imageUrl: "/struktur/rengga.png",
       },
       {
-        name: "Renggars 16",
+        name: "Arta",
         major: "Teknik Informatika",
-        imageUrl: "/profile.jpeg",
+        imageUrl: "/struktur/arta.png",
       },
     ],
   },
@@ -99,7 +107,7 @@ const MemberCard = ({ name, major, imageUrl }) => {
   return (
     <div
       // Kontainer utama card dengan efek hover group
-      className="group relative flex items-center space-x-2 lg:space-x-3  md:space-x-3 p-2 md:p-3 rounded-xl shadow-lg bg-gray-800 border border-gray-700 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-indigo-500/30 hover:-translate-y-1 hover:scale-105"
+      className="group relative flex items-center space-x-2 lg:space-x-3  md:space-x-3 p-2 md:p-3 rounded-xl shadow-lg bg-gray-800 border border-gray-700 overflow-hidden transform transition-all duration-300 ease-in-out hover:shadow-indigo-500/30 hover:-translate-y-1 hover:scale-105 min-w-52 justify-center"
     >
       {/* 1. Bagian Kiri: Gambar */}
       <div className="flex-shrink-0">
@@ -108,7 +116,7 @@ const MemberCard = ({ name, major, imageUrl }) => {
             src={imageUrl}
             alt={`Foto ${name}`}
             fill
-            className="rounded-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="rounded-full object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       </div>
@@ -135,7 +143,7 @@ const Structure = () => {
   return (
     <section
       id="structure"
-      className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center"
+      className="w-full min-h-screen bg-black text-white flex flex-col items-center justify-center scroll-mt-28"
     >
       <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-100">
         Structure
@@ -148,7 +156,7 @@ const Structure = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          Dosen
+          Dosen Pembimbing Lapangan
         </div>
         <div data-aos="fade-up">
           <MemberCard
@@ -168,77 +176,23 @@ const Structure = () => {
 
       {/* Ketua & Wakil Ketua*/}
       <div className="flex flex-col items-center">
-        <div className="flex justify-center w-full">
-          {/* Horizontal line */}
-          <div
-            className="w-0.5 h-5 bg-white relative"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
-          {/* Vertical line */}
-          <div
-            className="h-0.5 bg-white w-[170px] sm:w-[190px] md:w-[270px] lg:w-[450px] xl:w-[600px]"
-            data-aos="fade-up"
-            data-aos-delay="150"
-          />
-          {/* Horizontal line */}
-          <div
-            className="w-0.5 h-5 bg-white relative"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          />
-        </div>
-
-        <div className="flex justify-center gap-x-[24px] sm:gap-[38px] md:gap-x-[115px] lg:gap-x-[272px] xl:gap-[414px]">
-          <div
-            className="flex flex-col items-center"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            <div className="text-white my-1">Ketua</div>
-            <MemberCard
-              name={ORGANIZATIONAL_CHART_DATA.ketuaKelas.name}
-              position={ORGANIZATIONAL_CHART_DATA.ketuaKelas.position}
-              major={ORGANIZATIONAL_CHART_DATA.ketuaKelas.major}
-              imageUrl={ORGANIZATIONAL_CHART_DATA.ketuaKelas.imageUrl}
-            />
-            {/* Vertical line */}
-            <div
-              className="w-0.5 h-5 bg-white ml-1.5"
-              data-aos="fade-up"
-              data-aos-delay="250"
-            />
-          </div>
-          <div
-            className="flex flex-col items-center"
-            data-aos="fade-up"
-            data-aos-delay="250"
-          >
-            <div className="text-white my-1">Wakil Ketua</div>
-            <MemberCard
-              name={ORGANIZATIONAL_CHART_DATA.wakilKetua.name}
-              position={ORGANIZATIONAL_CHART_DATA.wakilKetua.position}
-              major={ORGANIZATIONAL_CHART_DATA.wakilKetua.major}
-              imageUrl={ORGANIZATIONAL_CHART_DATA.wakilKetua.imageUrl}
-            />
-            {/* Vertical line */}
-            <div
-              className="w-0.5 h-5 bg-white mr-1.5"
-              data-aos="fade-up"
-              data-aos-delay="250"
-            />
-          </div>
-        </div>
-        {/* Horizontal line */}
         <div
-          className="h-0.5 bg-white w-[170px] sm:w-[184px] md:w-[270px] lg:w-[451px] xl:w-[600px]"
+          className="flex flex-col items-center"
           data-aos="fade-up"
-          data-aos-delay="300"
-        />
+          data-aos-delay="250"
+        >
+          <div className="text-white my-1">Ketua</div>
+          <MemberCard
+            name={ORGANIZATIONAL_CHART_DATA.ketuaKelas.name}
+            position={ORGANIZATIONAL_CHART_DATA.ketuaKelas.position}
+            major={ORGANIZATIONAL_CHART_DATA.ketuaKelas.major}
+            imageUrl={ORGANIZATIONAL_CHART_DATA.ketuaKelas.imageUrl}
+          />
+        </div>
       </div>
 
       {/* LEVEL 3 (Sekretaris & Bendahara) */}
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center justify-center">
         {/* Vertical line */}
         <div
           className="w-0.5 h-10 bg-white"
@@ -254,7 +208,7 @@ const Structure = () => {
           />
           {/* Vertical line */}
           <div
-            className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[596px] bg-white"
+            className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[566px] bg-white"
             data-aos="fade-up"
             data-aos-delay="400"
           />
@@ -265,61 +219,69 @@ const Structure = () => {
             data-aos-delay="400"
           />
         </div>
-        <div className="flex justify-center gap-x-[24px] sm:gap-x-[38px] md:gap-x-[115px] lg:gap-x-[284px] xl:gap-[420px]">
+        <div className="flex justify-center items-center gap-x-[24px] sm:gap-x-[38px] md:gap-x-[115px] lg:gap-x-[284px] xl:gap-[500px]">
+          <div className="text-white my-1">Bendahara</div>
+          <div className="text-white my-1">Sekretaris</div>
+        </div>
+        <div className="flex justify-center items-center gap-x-[24px] sm:gap-x-[38px] md:gap-x-[115px] lg:gap-x-[284px] xl:gap-[340px]">
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
             data-aos-delay="450"
           >
-            <div className="text-white my-1">Sekretaris</div>
             <MemberCard
               name={ORGANIZATIONAL_CHART_DATA.sekretaris.name}
               position={ORGANIZATIONAL_CHART_DATA.sekretaris.position}
               major={ORGANIZATIONAL_CHART_DATA.sekretaris.major}
               imageUrl={ORGANIZATIONAL_CHART_DATA.sekretaris.imageUrl}
             />
-            {/* Vertical line */}
             <div
-              className="w-0.5 h-8 sm:h-5 bg-white ml-1.5"
+              className="w-0.5 h-5 bg-white relative mr-5"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="550"
             />
           </div>
+          {/* Vertical line */}
+
           <div
             className="flex flex-col items-center"
             data-aos="fade-up"
             data-aos-delay="450"
           >
-            <div className="text-white my-1">Bendahara</div>
             <MemberCard
               name={ORGANIZATIONAL_CHART_DATA.bendahara.name}
               position={ORGANIZATIONAL_CHART_DATA.bendahara.position}
               major={ORGANIZATIONAL_CHART_DATA.bendahara.major}
               imageUrl={ORGANIZATIONAL_CHART_DATA.bendahara.imageUrl}
             />
-            {/* Vertical line */}
             <div
-              className="w-0.5 h-8 sm:h-5 bg-white mr-1.5"
+              className="w-0.5 h-5 bg-white relative"
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="550"
             />
           </div>
         </div>
-      </div>
-
-      {/* LEVEL 4 (Humas, Acara, Perlengkapan) */}
-      <div className="flex flex-col items-center">
+        {/* Vertical line */}
+        <div
+          className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[573px] xl:ml-[2px] bg-white"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        />
         {/* Horizontal line */}
         <div
-          className="mx-auto h-0.5 sm:w-[400px] md:w-[550px] lg:w-[730px] xl:w-[834px] bg-white"
+          className="w-0.5 h-10 bg-white relative"
           data-aos="fade-up"
           data-aos-delay="550"
         />
 
-        <div className="hidden sm:flex justify-center w-full max-w-5xl sm:gap-x-[197px] md:gap-x-[272px] lg:gap-x-[362px] xl:gap-x-[414px]">
-          {/* Vertical line */}
+        <div
+          className="h-0.5 w-[170px] sm:w-[184px] md:w-[270px] lg:w-[450px] xl:w-[746px] bg-white"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        />
+        <div className="flex justify-center items-center xl:gap-x-[370px]">
           <div
-            className="w-0.5 h-5 bg-white relative ml-1"
+            className="w-0.5 h-5 bg-white relative"
             data-aos="fade-up"
             data-aos-delay="550"
           />
@@ -329,30 +291,31 @@ const Structure = () => {
             data-aos-delay="550"
           />
           <div
-            className="w-0.5 h-5 bg-white relative mr-1"
+            className="w-0.5 h-5 bg-white relative"
             data-aos="fade-up"
             data-aos-delay="550"
           />
         </div>
+      </div>
 
-        <div className="flex justify-center gap-x-[120px] sm:gap-x-[150px] md:gap-x-[230px] lg:gap-x-[324px] xl:gap-x-[367px] my-1">
-          <div data-aos="fade-up" data-aos-delay="600">
+      {/* LEVEL 4 (Humas, Acara, Perlengkapan) */}
+      <div className="flex flex-col items-center">
+        {/* Vertical line */}
+
+        <div className="flex justify-center gap-x-[120px] sm:gap-x-[150px] md:gap-x-[230px] lg:gap-x-[324px] xl:gap-x-[325px] my-1">
+          <div data-aos="fade-up" data-aos-delay="600" className="">
             Humas
           </div>
           <div data-aos="fade-up" data-aos-delay="600">
             Acara
           </div>
-          <div
-            className="hidden sm:block"
-            data-aos="fade-up"
-            data-aos-delay="600"
-          >
+          <div data-aos="fade-up" data-aos-delay="600" className="">
             Perkap
           </div>
         </div>
 
-        <div className="flex justify-center gap-x-[24px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[25px] 2xl:gap-x-[40px">
-          <div className="flex flex-col xl:flex-row  gap-3">
+        <div className="flex justify-center gap-x-[24px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[170px]">
+          <div className="flex flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.humas.map((member, index) => (
               <div
                 key={`humas-${index}`}
@@ -367,8 +330,9 @@ const Structure = () => {
                 />
               </div>
             ))}
+            <div className="w-0.5 h-5 bg-white" />
           </div>
-          <div className="flex flex-col xl:flex-row  gap-3">
+          <div className="flex flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.acara.map((member, index) => (
               <div
                 key={`acara-${index}`}
@@ -383,9 +347,9 @@ const Structure = () => {
                 />
               </div>
             ))}
+            <div className="w-0.5 h-5 bg-white " />
           </div>
-
-          <div className="hidden sm:flex sm:flex-col xl:flex-row gap-3">
+          <div className="hidden sm:flex flex-col sm:flex-col xl:flex-col gap-3 items-center">
             {ORGANIZATIONAL_CHART_DATA.divisi.perlengkapan.map(
               (member, index) => (
                 <div
@@ -401,33 +365,17 @@ const Structure = () => {
                 </div>
               )
             )}
+            <div className="w-0.5 h-5 bg-white " />
           </div>
-        </div>
-        <div
-          className="flex sm:hidden xl:flex gap-x-40"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          <div className="w-0.5 h-5 bg-white " />
-          <div className="w-0.5 h-5 bg-white" />
         </div>
 
         <div
-          className="flex sm:hidden xl:inline-block h-0.5 bg-white w-[164px]"
+          className="flex sm:hidden xl:inline-block h-0.5 bg-white w-[758px]"
           data-aos="fade-up"
           data-aos-delay="650"
         />
       </div>
 
-      {/* Vertical line */}
-      <div
-        className="w-0.5 h-6 bg-white"
-        data-aos="fade-up"
-        data-aos-delay="700"
-      />
-      <div className="sm:hidden my-1" data-aos="fade-up" data-aos-delay="600">
-        Perkap
-      </div>
       <div className="flex justify-center gap-x-[24px]">
         <div className="flex flex-col sm:hidden gap-3">
           {ORGANIZATIONAL_CHART_DATA.divisi.perlengkapan.map(
@@ -465,20 +413,24 @@ const Structure = () => {
           Dokumentasi
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          {ORGANIZATIONAL_CHART_DATA.divisi.dokumentasi.map((member, index) => (
-            <div
-              key={`dokumentasi-${index}`}
-              data-aos="fade-up"
-              data-aos-delay={700 + index * 50}
-            >
-              <MemberCard
-                name={member.name}
-                major={member.major}
-                imageUrl={member.imageUrl}
-              />
-            </div>
-          ))}
+        <div className="flex justify-center gap-x-[24px] sm:gap-x-[50px] md:gap-x-[120px] lg:gap-x-[180px] xl:gap-x-[50px] 2xl:gap-x-[80px">
+          <div className="flex  justify-center gap-x-5">
+            {ORGANIZATIONAL_CHART_DATA.divisi.dokumentasi.map(
+              (member, index) => (
+                <div
+                  key={`dokumentasi-${index}`}
+                  data-aos="fade-up"
+                  data-aos-delay={700 + index * 50}
+                >
+                  <MemberCard
+                    name={member.name}
+                    major={member.major}
+                    imageUrl={member.imageUrl}
+                  />
+                </div>
+              )
+            )}
+          </div>
         </div>
       </div>
     </section>

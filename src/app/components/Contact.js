@@ -17,12 +17,12 @@ const ContactSection = () => {
     {
       icon: "/instagram.png",
       label: "instagram.com/kknKembangBelor",
-      link: "https://www.instagram.com/instagram.com/kknKembangBelor/",
+      link: "https://www.instagram.com/kknt_kembangbelor/",
     },
     {
-      icon: "/whatsapp.png",
-      label: "+62-811-4748-999 (Chat only)",
-      link: "https://wa.me/628114748999",
+      icon: "/tiktok.png",
+      label: "@kknt.kembang.belor",
+      link: "https://www.tiktok.com/@kknt.kembang.belor",
     },
   ];
 
@@ -57,7 +57,7 @@ const ContactSection = () => {
             </p>
           </div>
           {/* Tombol Get Direction */}
-          <a
+          <Link
             href="https://maps.app.goo.gl/4Twt4iZv3TsfqsWu8"
             target="_blank"
             rel="noopener noreferrer"
@@ -65,13 +65,15 @@ const ContactSection = () => {
             <button className="bg-orange-500 hover:bg-orange-400 text-white font-semibold py-2 lg:py-3 px-5 lg:px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mb-8 cursor-pointer">
               GET DIRECTION
             </button>
-          </a>
+          </Link>
           {/* Tautan Media Sosial */}
           <div className="flex flex-col space-y-4 w-fulld">
             {socialMediaLinks.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-300"
               >
                 <div className="flex gap-4 items-center">
@@ -251,7 +253,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full bg-black text-white min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 py-16 px-6 sm:px-12 md:px-16 "
+      className="w-full bg-black text-white min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-12 lg:gap-20 py-16 px-6 sm:px-12 md:px-16 xl:px-24"
     >
       <ContactSection />
       <CommentForm />

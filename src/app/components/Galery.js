@@ -39,7 +39,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative w-full min-h-screen py-20 flex flex-col items-center justify-center overflow-hidden bg-black"
+      className="relative w-full min-h-screen py-20 flex flex-col items-center justify-center overflow-hidden bg-black md:scroll-mt-5 xl:scroll-mt-10"
     >
       {/* Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br "></div>
@@ -102,9 +102,14 @@ export default function Gallery() {
                 <Image
                   src={src}
                   alt={`Gallery image ${index + 1}`}
-                  width={750}
-                  height={850}
-                  className="rounded-2xl object-cover shadow-2xl"
+                  width={550}
+                  height={450}
+                  className="rounded-2xl object-cover shadow-2xl
+             w-[250px] h-[300px] 
+             sm:w-[420px] sm:h-[300px] 
+             md:w-[460px] md:h-[370px]
+             lg:w-[500px] lg:h-[400px]
+             xl:w-[550px] xl:h-[450px]"
                 />
               </SwiperSlide>
             ))}

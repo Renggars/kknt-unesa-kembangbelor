@@ -27,11 +27,14 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <div
+      id="home"
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image with Parallax Effect */}
       <motion.div
         className="absolute -top-10 lg:top-0 left-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: "url('/blog.webp')" }}
+        style={{ backgroundImage: "url('/blog.png')" }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{
@@ -43,7 +46,7 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-purple-900/50 to-black/60"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-purple-900/50 to-black/60" />
 
       {/* Content */}
       <motion.div
@@ -73,7 +76,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div variants={itemVariants} className="mt-10">
-          <button className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <button className="bg-white text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer">
             Jelajahi Karya Kami
           </button>
         </motion.div>
